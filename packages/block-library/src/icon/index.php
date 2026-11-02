@@ -98,7 +98,7 @@ function render_block_core_icon( $attributes ) {
 		array(
 			// Width is applied via the dimensions block support styles below.
 			'size'  => null,
-			'class' => $styles['classnames'] ?? '',
+			'class' => $styles['classnames'],
 			'label' => $attributes['ariaLabel'] ?? '',
 		)
 	);
