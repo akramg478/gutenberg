@@ -235,14 +235,14 @@ parameters:
 			path: ../../packages/block-library/src/categories/index.php
 
 		-
-			message: '#^Parameter \#2 \$size of function get_avatar expects int, null given\.$#'
-			identifier: argument.type
+			message: '#^Function wp_get_spacing_classes_and_styles not found\.$#'
+			identifier: function.notFound
 			count: 1
 			path: ../../packages/block-library/src/comment-author-avatar/index.php
 
 		-
-			message: '#^Variable \$spacing_string might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Parameter \#2 \$size of function get_avatar expects int, null given\.$#'
+			identifier: argument.type
 			count: 1
 			path: ../../packages/block-library/src/comment-author-avatar/index.php
 
@@ -287,6 +287,12 @@ parameters:
 			identifier: argument.type
 			count: 1
 			path: ../../packages/block-library/src/gallery/index.php
+
+		-
+			message: '#^Function wp_get_spacing_classes_and_styles not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: ../../packages/block-library/src/icon/index.php
 
 		-
 			message: '#^Parameter \#1 \$query of method WP_HTML_Tag_Processor\:\:next_tag\(\) expects array\{tag_name\?\: string\|null, match_offset\?\: int\|null, class_name\?\: string\|null, tag_closers\?\: string\|null\}\|null, ''svg'' given\.$#'
@@ -413,6 +419,12 @@ parameters:
 			identifier: argument.type
 			count: 1
 			path: ../../packages/block-library/src/post-featured-image/index.php
+
+		-
+			message: '#^Function wp_get_spacing_classes_and_styles not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: ../../packages/block-library/src/post-navigation-link/index.php
 
 		-
 			message: '#^Function block_core_post_time_to_read_word_count\(\) should return string but returns int\.$#'
