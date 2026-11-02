@@ -223,6 +223,12 @@ parameters:
 			path: ../../packages/block-library/src/accordion-item/index.php
 
 		-
+			message: '#^Function wp_get_shadow_classes_and_styles not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: ../../packages/block-library/src/avatar/index.php
+
+		-
 			message: '#^Property WP_Comment\:\:\$comment_author_url \(string\) in isset\(\) is not nullable\.$#'
 			identifier: isset.property
 			count: 1
@@ -331,6 +337,12 @@ parameters:
 			path: ../../packages/block-library/src/loginout/index.php
 
 		-
+			message: '#^Function wp_get_shadow_classes_and_styles not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: ../../packages/block-library/src/navigation-submenu/index.php
+
+		-
 			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
 			identifier: function.alreadyNarrowedType
 			count: 2
@@ -409,6 +421,12 @@ parameters:
 			path: ../../packages/block-library/src/playlist/index.php
 
 		-
+			message: '#^Function wp_get_shadow_classes_and_styles not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: ../../packages/block-library/src/post-featured-image/index.php
+
+		-
 			message: '#^Parameter \#1 \$query of method WP_HTML_Tag_Processor\:\:next_tag\(\) expects array\{tag_name\?\: string\|null, match_offset\?\: int\|null, class_name\?\: string\|null, tag_closers\?\: string\|null\}\|null, ''img'' given\.$#'
 			identifier: argument.type
 			count: 1
@@ -449,6 +467,12 @@ parameters:
 			identifier: argument.type
 			count: 2
 			path: ../../packages/block-library/src/post-time-to-read/index.php
+
+		-
+			message: '#^Function wp_get_shadow_classes_and_styles not found\.$#'
+			identifier: function.notFound
+			count: 1
+			path: ../../packages/block-library/src/search/index.php
 
 		-
 			message: '#^Parameter \#3 \$side of function apply_block_core_search_border_style expects string, null given\.$#'
