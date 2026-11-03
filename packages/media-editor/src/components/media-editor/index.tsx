@@ -248,11 +248,11 @@ interface MediaEditorFrameContextValue {
 	canRestoreOriginal: boolean;
 	/**
 	 * When `true`, another attachment has replaced the edited one in the
-	 * cropper this session (today, only the original), so the menu item is
+	 * image editor this session (today, only the original), so the menu item is
 	 * disabled.
 	 */
 	isSourceReplaced: boolean;
-	/** Load the lineage root into the cropper as a dirty preview. */
+	/** Load the lineage root into the image editor as a dirty preview. */
 	onRestoreOriginal: () => void;
 }
 
@@ -607,11 +607,11 @@ function MediaEditorContent( {
 	const [ isPlacementActive, setIsPlacementActive ] = useState( false );
 	const [ isCanvasGestureActive, setIsCanvasGestureActive ] =
 		useState( false );
-	// Whether another attachment has replaced `id` in the cropper this
+	// Whether another attachment has replaced `id` in the image editor this
 	// session (today, the original via "Restore original image"). Stays a
-	// distinct flag (not derived from the cropper) so a bare replacement
+	// distinct flag (not derived from the image editor) so a bare replacement
 	// counts as a change even though swapping the source resets the
-	// cropper's own dirty baseline.
+	// image editor's own dirty baseline.
 	const [ isSourceReplaced, setIsSourceReplaced ] = useState( false );
 	const placementControlTimerRef = useRef<
 		ReturnType< typeof setTimeout > | undefined
@@ -642,7 +642,7 @@ function MediaEditorContent( {
 	// exposed by the server as the root-level `edit_root` id on the
 	// attachment (edit context, embeddable via the `wp:edit-root` link).
 	// Fetch the original's record for the URL and natural dimensions the
-	// cropper needs to seed itself.
+	// image editor needs to seed itself.
 	const originalId: number | undefined = sourceMedia?.edit_root;
 	const originalRecord = useSelect(
 		( select ) =>
@@ -730,7 +730,7 @@ function MediaEditorContent( {
 		setIsSourceReplaced( true );
 	}, [ clearEntityRecordEdits, id ] );
 
-	// A bare replacement has no cropper diff, so OR the flag in explicitly.
+	// A bare replacement has no image editor change, so OR the flag in explicitly.
 	const hasChanges = session.hasOutputEdits || hasEdits || isSourceReplaced;
 
 	const mediaType = getMediaTypeFromMimeType( media?.mime_type ).type;
