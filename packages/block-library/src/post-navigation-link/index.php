@@ -231,15 +231,8 @@ function block_core_post_navigation_link_get_support_styles( $attributes ) {
 		)
 	);
 
-	$class_names = $styles['classnames'] ?? '';
-
-	// The style engine only adds `has-background` for a gradient, the background block support adds it for an image too.
-	if ( ! empty( $background_styles['backgroundImage'] ) && ! in_array( 'has-background', explode( ' ', $class_names ), true ) ) {
-		$class_names = trim( "{$class_names} has-background" );
-	}
-
 	return array(
-		'class' => $class_names,
+		'class' => $styles['classnames'] ?? '',
 		'style' => $styles['css'] ?? '',
 	);
 }

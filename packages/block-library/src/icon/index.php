@@ -142,11 +142,6 @@ function render_block_core_icon( $attributes ) {
 			$processor->set_attribute( 'style', $merged_style );
 		}
 
-		// The style engine only adds `has-background` for a gradient.
-		if ( ! empty( $background_styles['backgroundImage'] ) ) {
-			$processor->add_class( 'has-background' );
-		}
-
 		// Apply flip classes to the SVG.
 		$flip_horizontal = $attributes['flipHorizontal'] ?? false;
 		$flip_vertical   = $attributes['flipVertical'] ?? false;

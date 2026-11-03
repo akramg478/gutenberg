@@ -88,6 +88,23 @@ class Block_Core_Icon_Render_Test extends WP_UnitTestCase {
 		$this->assertLessThan( strpos( $style, 'rotate' ), strpos( $style, 'fill' ) );
 	}
 
+	public function test_background_image_adds_the_background_class() {
+		$output = gutenberg_render_block_core_icon(
+			array(
+				'icon'  => 'core/caution',
+				'style' => array(
+					'background' => array(
+						'backgroundImage' => array( 'url' => 'https://example.com/image.jpg' ),
+					),
+				),
+			)
+		);
+
+		$processor = new WP_HTML_Tag_Processor( $output );
+		$this->assertTrue( $processor->next_tag( 'svg' ) );
+		$this->assertTrue( $processor->has_class( 'has-background' ) );
+	}
+
 	public function test_renders_only_icons_in_public_collections() {
 		// Renders public core icon.
 		$processor = new WP_HTML_Tag_Processor( gutenberg_render_block_core_icon( array( 'icon' => 'core/caution' ) ) );
