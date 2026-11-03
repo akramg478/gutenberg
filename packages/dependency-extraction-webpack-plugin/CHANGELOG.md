@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Enhancements
+
+-   Add `@wordpress/image-editor` as a bundled package, so consumer builds bundle it instead of externalizing it to a nonexistent `wp-image-editor` script.
+
 ### Internal
 
 -   Update the Vitest development dependency to 5.0.5 ([#86173](https://github.com/WordPress/gutenberg/pull/86173)).
